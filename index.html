@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/general/global.css">
+</head>
+
+<body>
+
+    <!-- navbar and header -->
+    <header>
+        <nav>
+            <div class="container">
+                <div class="list">
+                    <div class="nav-bar hide">
+                        <div class="container">
+                            <ul>
+                                <li><a href="#">home</a></li>
+                                <li><a href="#Latest Movies">Latest Movies</a></li>
+                                <li><a href="#Category">Categories</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="list-btn " onclick="openList()">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="close-list-btn hide" onclick="closeList()">
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="logo">
+                        <h1>MOVIES</h1>
+                    </div>
+                </div>
+
+                <div class="search-bar">
+                    <input type="text" placeholder="Search">
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="intro-page ">
+        <div class="video hide ">
+            <div class="container">
+                <div class="close-list-btn " onclick="closeVideo()">
+                    <span></span>
+                    <span></span>
+                </div>
+                <video controls autoplay src="./MoviesWebsiteImages/play-page/Jumanji.mp4" type="video/mp4"></video>
+            </div>
+        </div>
+        <div class="item">
+            <div class="img cover-bg">
+                <img src="./MoviesWebsiteImages/play-page/play-background.jpg" alt="">
+            </div>
+            <div class="container">
+                <div class="content">
+                    <div class="text">
+                        <h1>JUMANJI <span>WELCOME TO THE JUNGLE</span> </h1>
+                        <p>Four teenagers are sucked into a magical video game, and the only way they can escape is to
+                            work together to finish the game.</p>
+                    </div>
+                    <div class="play">
+                        <button type="submit" onclick="playVideo()">Watch Trailer</button>
+                    </div>
+                </div>
+                <div class="play-video-icon" onclick="playVideo()">
+                    <div class="container">
+                        <span>
+                            <div></div>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Latest Movies -->
+    <div class="page-1" id="Latest Movies">
+        <div class="container">
+            <h1>Latest Movies</h1>
+            <div class="items">
+                <!-- item which builded by js -->
+                <!-- <div class="item">
+                <div class="img">
+                    <img src="./MoviesWebsiteImages/img/movie-1.jpg" alt="">
+                </div>
+              <div class="movie-infos">
+                  <div class="info-up">
+                    <span class="full-hd">
+                        FULL HD
+                    </span>
+                </div>
+                <div class="info-down">
+                    <div class="movie-name">
+                        <span>2017</span>
+                        <span>Pirotes of the </span>
+                    </div>
+                </div>
+
+                <div class="category">
+                    <span class="cate">Horor | horor</span>
+                    <div class="degree">
+                        <span>5.2</span>
+                     <img src="./MoviesWebsiteImages/img/fav-icon.png" alt="">
+                    </div>
+                </div>
+              </div>
+                </div> -->
+            </div>
+
+            <!-- when click on the movie -->
+            <div class="movie-popup hide">
+                <div class="container">
+                    <div class="close-list-btn" onclick="closePopUp()">
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                    <div class="left">
+                        <div class="title">
+                            <h3>stranger things</h3>
+
+                            <pre><span class="y">2017</span>  <span class="c">Action | Adventure</span></pre>
+                        </div>
+                        <div class="discription">
+                            <p>L</p>
+                        </div>
+
+                        <div class="play">
+                            <a href="./moviesPages/movie.html">
+                                <button type="submit">Watch Movie</button>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <div class="img">
+                            <img src="./MoviesWebsiteImages/img/movie-1.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Categories -->
+    <div class="page-2" id="Category">
+        <div class="container">
+            <div class="head-title">
+                <h1>Categories</h1>
+            </div>
+            <div class="down-page">
+                <div class="item">
+                    <div class="img">
+                        <img src="./MoviesWebsiteImages/category/action.jpg" alt="">
+                    </div>
+                    <h4>Action</h4>
+                </div>
+
+                <!-- 2 -->
+                <div class="item">
+                    <div class="img">
+                        <img src="./MoviesWebsiteImages/category/adventure.jpg" alt="">
+                    </div>
+                    <h4>Adventure</h4>
+                </div>
+
+                <!-- 3 -->
+                <div class="item">
+                    <div class="img">
+                        <img src="./MoviesWebsiteImages/category/animated.jpg" alt="">
+                    </div>
+                    <h4>Animated</h4>
+                </div>
+
+                <!-- 4 -->
+                <div class="item">
+                    <div class="img">
+                        <img src="./MoviesWebsiteImages/category/comedy.jpg" alt="">
+                    </div>
+                    <h4>Comedy</h4>
+                </div>
+
+                <!-- 5 -->
+                <div class="item">
+                    <div class="img">
+                        <img src="./MoviesWebsiteImages/category/crime.jpg" alt="">
+                    </div>
+                    <h4>Crime</h4>
+                </div>
+
+                <!-- 6 -->
+                <div class="item">
+                    <div class="img">
+                        <img src="./MoviesWebsiteImages/category/horror.jpg" alt="">
+                    </div>
+                    <h4>Horror</h4>
+                </div>
+
+                <!-- 7 -->
+                <div class="item">
+                    <div class="img">
+                        <img src="./MoviesWebsiteImages/category/sci-fi.jpg" alt="">
+                    </div>
+                    <h4>Sci-Fi</h4>
+                </div>
+                <!-- 8 -->
+                <div class="item">
+                    <div class="img">
+                        <img src="./MoviesWebsiteImages/category/thriller.webp" alt="">
+                    </div>
+                    <h4>Thriller</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <footer>
+        <div class="container">
+            <div>
+                &copy; Made By Shahd Ahmed
+                <a href="">+201021481386</a>
+                <a href="">LinkedIn</a>
+                <a href="">GitHub</a>
+                <a href="">shahdahmed00001111@gmail.com</a>
+
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- link js main file and handler -->
+    <script src="script.js"></script>
+    <script src="./moviesPages/movieHandler.js"></script>
+</body>
+
+</html>

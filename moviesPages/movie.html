@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title class="movie-title"></title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/general/global.css">
+
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        let item1Name = localStorage.getItem("itemName")
+        let item1P = localStorage.getItem("itemP")
+        let item1Img = localStorage.getItem("itemImg")
+        let item1Trailer = localStorage.getItem("itemTrailer")
+        let itemCategory = localStorage.getItem("itemCategory");
+
+        document.querySelector("#movie-trailer").poster = item1Img
+        document.querySelector("#movie-trailer").src = item1Trailer
+        document.querySelector("#movie-category").innerText = itemCategory
+
+        document.querySelectorAll(".movie-title").forEach((i) => {
+            i.innerText = item1Name
+        })
+        document.querySelectorAll(".movie-description").forEach((i) => {
+            i.innerText = item1P
+        })
+        document.getElementById("movie-cover").src = item1Img
+
+    })
+
+    function playTrailer() {
+        document.querySelector(".after").style.top = -100 + "%"
+        setTimeout(function wait() {
+            document.querySelector(".play-video-icon").classList.add("hide")
+            document.querySelector("#movie-trailer").setAttribute("controls", "")
+            document.querySelector("#movie-trailer").play();
+            document.querySelector(".after").classList.add("hide");
+
+        }, 300)
+    }
+
+</script>
+</head>
+<body>
+
+    <!-- header and nav bar -->
+    <header>
+        <nav>
+            <div class="container">
+                <div class="list">
+                    <div class="nav-bar hide">
+                        <div class="container">
+                            <ul>
+                                <li><a href="../index.html">home</a></li>
+                                <li><a href="../index.html #Latest Movies">Latest Movies</a></li>
+                                <li><a href="../index.html #Category">Categories</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="list-btn " onclick="openList()">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="close-list-btn hide" onclick="closeList()">
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="logo">
+                        <h1>MOVIES</h1>
+                    </div>
+                </div>
+
+                <div class="search-bar">
+                    <input type="text" placeholder="Search">
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- 1 -->
+    <div class="intro-page ">
+        <div class="box">
+            <div class="img cover-bg">
+                <img id="movie-cover" src="../MoviesWebsiteImages/play-page/play-background.jpg" alt="">
+            </div>
+            <div class="container">
+                <div class="content">
+                    <div class="text">
+                        <h1 class="movie-title">JUMANJI </h1>
+
+                        <p class="movie-description">Four teenagers are sucked into a magical video game, and the only
+                            way they can escape is to
+                            work together to finish the game.</p>
+                    </div>
+                    <div class="play">
+                        <a href="#movie-trailer">
+                            <button type="submit">Watch Trailer</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- page 1 -->
+    <div class="movie-page1">
+        <div class="container">
+
+            <!-- title and summary about the movie -->
+            <div class="up">
+                <div>
+                    <h1 class="movie-title">Jumangi</h1>
+                    <span id="movie-category">dd</span>
+                </div>
+                <p class="movie-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione odit
+                    voluptatum animi iusto quo! Explicabo eaque culpa fugiat ex temporibus minima quidem sapiente fugit
+                    atque, dolore hic, ab ipsa porro.</p>
+            </div>
+        </div>
+
+        <!-- watch trailer -->
+        <div class="watch">
+            <div class="container">
+                <div class="play-video-icon" onclick="playTrailer()">
+                    <span>
+                        <div></div>
+                    </span>
+                </div>
+                <h1>Watch Trailer</h1>
+                <div class="video">
+                    <div class="after"></div>
+                    <video id="movie-trailer" poster="./MoviesWebsiteImages/covers/wp2393105.webp"
+                        src="../MoviesWebsiteImages/play-page/Jumanji.mp4"></video>
+                </div>
+            </div>
+        </div>
+
+        <!-- download movie -->
+        <div class="down">
+            <h1>Download Movie</h1>
+            <div class="quality">
+                <div>780p</div>
+                <div>480p</div>
+                <div>1080p</div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- footer -->
+    <footer>
+        <div class="container">
+            <div>
+                &copy; Made By Shahd Ahmed
+                <a href="">+201021481386</a>
+                <a href="">LinkedIn</a>
+                <a href="">GitHub</a>
+                <a href="">shahdahmed00001111@gmail.com</a>
+
+            </div>
+        </div>
+    </footer>
+
+    <!-- link main js file -->
+    <script src="../script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+     scroll-behavior: smooth;
+}
+
+a{
+    text-decoration: none;
+    cursor: pointer;
+}
+
+button{
+    cursor: pointer;
+}
+
+ul{
+    list-style: none;
+}
+
+.container{
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (min-width:767px) {
+    .container{
+        width: 750px;
+    }
+    
+}
+@media (min-width:992px) {
+    .container{
+        width: 950px;
+    }
+    
+}
+@media (min-width:1200px) {
+    .container{
+        width: 1150px;
+    }
+    
+}
